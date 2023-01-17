@@ -7,14 +7,15 @@
 
 import React from 'react';
 import {
-  SafeAreaView, ScrollView,
+  Platform,
+  SafeAreaView,
+  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
   useColorScheme,
   View
 } from 'react-native';
-
 import {
   Colors,
   DebugInstructions,
@@ -22,7 +23,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
 import { WebView } from 'react-native-webview';
 
 function App(): JSX.Element {
@@ -32,6 +32,12 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  const sourceUri = (
+    Platform.OS === 'android'
+      ? 'file:///android_asset/'
+      : ''
+  ) + 'Web.bundle/index.html';
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -40,9 +46,11 @@ function App(): JSX.Element {
       />
       <View style={{width: '100%', height: '100%'}}>
         <WebView
-          // source={{ uri: 'https://www.baidu.com' }}
-          source={{ uri: 'http://10.103.4.217:9999/FoxitPDFSDKForWeb/publish/8.5.2/FoxitPDFSDKForWeb_8_5_2_Full/examples/PDFViewCtrl/basic_webViewer/' }}
-          style={{borderStyle: 'solid', borderColor: 'cyan', borderWidth: 1}}
+          // source={{uri: 'http://10.103.4.217:9999/FoxitPDFSDKForWeb/publish/8.5.2/FoxitPDFSDKForWeb_8_5_2_Full/examples/PDFViewCtrl/basic_webViewer/'}}
+          source={{uri: sourceUri}}
+          originWhitelist={['*']}
+          // android
+          allowFileAccess={true}
         />
       </View>
     </SafeAreaView>
