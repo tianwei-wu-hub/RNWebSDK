@@ -1,6 +1,9 @@
 # FoxitPDFSDK for Web Example - React Native
 
-This guide shows how to run the example.
+This guides are divided into two parts:
+
+- Part 1: How to run this example.
+- Part 2: Use FoxitPDFSDK for Web in React Native.
 
 ## Prerequisites
 
@@ -11,6 +14,8 @@ This guide shows how to run the example.
 
 - react-native >= 0.71.0 and use React Native CLI not Expo Go.
 - react-native-webview >= 11.26.0
+
+## Part 1: How to run this example.
 
 ## Setting up the development environment
 Follow the React Native docs to [setting up the development environment](https://reactnative.dev/docs/environment-setup). 
@@ -84,4 +89,8 @@ npx react-native run-ios
 ```
 
 Wait a while, your app will install and launch in iOS simulator automatically.
+
+## Part 2: Use FoxitPDFSDK for Web in React Native.
+
+
 
