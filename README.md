@@ -7,18 +7,13 @@ This guide shows how to run the example.
 - [FoxitPDFSDK for Web](https://developers.foxit.com/products/web/)
 - [Android Studio](https://developer.android.com/studio) or [XCode](https://developer.apple.com/xcode/)
 
+## System requirements
+
+- react-native >= 0.71.0 and use React Native CLI not Expo Go.
+- react-native-webview >= 11.26.0
+
 ## Setting up the development environment
 Follow the React Native docs to [setting up the development environment](https://reactnative.dev/docs/environment-setup). 
-
-_Note: Please select the React Native document version 0.71.0 ._
-
-_Note: Please select React Native CLI._
-
-## Clone the repository to any location:
-
-```bash
-git clone xxx.git RNWebSDKExample
-```
 
 ## Installation dependencies
 
