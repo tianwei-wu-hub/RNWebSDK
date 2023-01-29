@@ -22,21 +22,25 @@ git clone xxx.git FoxitPDFSDKForWebReactNativeExample
 
 ## Installation dependencies
 
-NPM,Android,iOS
+a. Nodejs dependencies
 
-a. 安装NPM依赖
-
-Navigate to `FoxitPDFSDKForWebReactNativeExample/`, and execute:
+Navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
 
 ```bash
 npm install
 ```
 
-b. 安装Android依赖
+b. Android dependencies
 
-使用Android Studio打开目录FoxitPDFSDKForWebReactNativeExample/android，点击右上角gradle图标，安装依赖
+Navigate to `FoxitPDFSDKForWebReactNativeExample/android`, and execute:
 
-c. 安装iOS依赖
+```bash
+./gradlew build
+```
+
+Execute "chmod +x gradlew" if don't have permission.
+
+c. iOS dependencies
 
 Navigate to `FoxitPDFSDKForWebReactNativeExample/ios`, and execute:
 
@@ -44,26 +48,38 @@ Navigate to `FoxitPDFSDKForWebReactNativeExample/ios`, and execute:
 pod install
 ```
 
-## 整合FoxitPDFSDK for Web
+## Integrate FoxitPDFSDK for Web
 
-1. 拷贝以下目录至FoxitPDFSDKForWebReactNativeExample/html/Web.bundle目录
+1. Copy the following directories to `FoxitPDFSDKForWebReactNativeExample/html/Web.bundle` directory.
 
 - FoxitPDFSDKForWeb_x_x_x_Full/lib
 - FoxitPDFSDKForWeb_x_x_x_Full/external
 
-2. 修改licenseSN和licenseKey
+2. Change the licenseSN and licenseKey.
 
-修改FoxitPDFSDKForWebReactNativeExample/html/index.html中licenseSN和licenseKey为FoxitPDFSDKForWeb_x_x_x_Full/examples/license-key.js中的值
+Change the licenseSN and licenseKey values in `FoxitPDFSDKForWebReactNativeExample/html/index.html` to the values of file `FoxitPDFSDKForWeb_x_x_x_Full/examples/license-key.js`.
 
 ## Runnning the example
 
 - Android
 
-1. 启动Metro打包服务，在RNWebSDK目录执行`npx react-native start`
-2. 启动Android模拟器
-3. 打包运行Android项目，在RNWebSDK目录执行`npx react-native run-android`
+1. Start the Metro service, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
+```bash
+npx react-native start
+```
+2. Start Android Emulator.
+3. In the new terminal, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
+```bash
+npx react-native run-android
+```
 
 - iOS
 
-1. 启动Metro打包服务，在RNWebSDK目录执行`npx react-native start`
-2. 打包运行iOS项目，在RNWebSDK目录执行`npx react-native run-ios`
+1. Start the Metro service, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
+```bash
+npx react-native start
+```
+2. In the new terminal, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
+```bash
+npx react-native run-ios
+```
