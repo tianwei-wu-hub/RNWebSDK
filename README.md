@@ -17,6 +17,8 @@ Follow the React Native docs to [setting up the development environment](https:/
 
 ## Installation dependencies
 
+Assume you clone project into the `RNWebSDKExample` directory.
+
 #### a. Nodejs dependencies
 
 Navigate to `RNWebSDKExample`, and execute:
