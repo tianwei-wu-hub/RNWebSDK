@@ -1,6 +1,6 @@
 # FoxitPDFSDK for Web Example - React Native
 
-This guide shows how to run this example.
+This guide shows how to run the example.
 
 ## Prerequisites
 
@@ -61,27 +61,27 @@ Change the licenseSN and licenseKey values in `FoxitPDFSDKForWebReactNativeExamp
 
 ## Runnning the example
 
-- Android
+### Android
 
 1. Start the Metro service, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
 ```bash
 npx react-native start
 ```
 2. Start Android Emulator.
-3. In the new terminal, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
+3. Run app, in the new terminal, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
 ```bash
 npx react-native run-android
 ```
 
 Wait a while, your app will install and launch in Android emulator automatically.
 
-- iOS
+### iOS
 
 1. Start the Metro service, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
 ```bash
 npx react-native start
 ```
-2. In the new terminal, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
+2. Run app, in the new terminal, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
 ```bash
 npx react-native run-ios
 ```
