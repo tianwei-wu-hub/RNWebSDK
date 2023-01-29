@@ -22,7 +22,7 @@ git clone xxx.git FoxitPDFSDKForWebReactNativeExample
 
 ## Installation dependencies
 
-a. Nodejs dependencies
+#### a. Nodejs dependencies
 
 Navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
 
@@ -30,7 +30,7 @@ Navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
 npm install
 ```
 
-b. Android dependencies
+#### b. Android dependencies
 
 Navigate to `FoxitPDFSDKForWebReactNativeExample/android`, and execute:
 
@@ -40,7 +40,7 @@ Navigate to `FoxitPDFSDKForWebReactNativeExample/android`, and execute:
 
 Execute "chmod +x gradlew" if don't have permission.
 
-c. iOS dependencies
+#### c. iOS dependencies
 
 Navigate to `FoxitPDFSDKForWebReactNativeExample/ios`, and execute:
 
@@ -50,12 +50,12 @@ pod install
 
 ## Integrate FoxitPDFSDK for Web
 
-1. Copy the following directories to `FoxitPDFSDKForWebReactNativeExample/html/Web.bundle` directory.
+#### 1. Copy the following directories to `FoxitPDFSDKForWebReactNativeExample/html/Web.bundle` directory.
 
 - FoxitPDFSDKForWeb_x_x_x_Full/lib
 - FoxitPDFSDKForWeb_x_x_x_Full/external
 
-2. Change the licenseSN and licenseKey.
+#### 2. Change the licenseSN and licenseKey.
 
 Change the licenseSN and licenseKey values in `FoxitPDFSDKForWebReactNativeExample/html/index.html` to the values of file `FoxitPDFSDKForWeb_x_x_x_Full/examples/license-key.js`.
 
@@ -73,6 +73,8 @@ npx react-native start
 npx react-native run-android
 ```
 
+Wait a while, your app will install and launch in Android emulator automatically.
+
 - iOS
 
 1. Start the Metro service, navigate to `FoxitPDFSDKForWebReactNativeExample`, and execute:
@@ -83,3 +85,6 @@ npx react-native start
 ```bash
 npx react-native run-ios
 ```
+
+Wait a while, your app will install and launch in iOS simulator automatically.
+
