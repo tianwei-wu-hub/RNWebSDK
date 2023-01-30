@@ -3,7 +3,7 @@
 These guides are divided into two parts:
 
 - [Part 1: How to run this example](#part-1-how-to-run-this-example)
-- [Part 2: Use FoxitPDFSDK for Web in React Native](#part-2-use-foxitpdfsdk-for-web-in-react-native)
+- [Part 2: How to use FoxitPDFSDK for Web in React Native](#part-2-how-to-use-foxitpdfsdk-for-web-in-react-native)
 
 ## Prerequisites
 
@@ -91,7 +91,7 @@ npx react-native run-ios
 
 Wait a while, your app will install and launch in iOS simulator automatically.
 
-## Part 2: Use FoxitPDFSDK for Web in React Native
+## Part 2: How to use FoxitPDFSDK for Web in React Native
 
 ### 1. Setting up the development environment
 
