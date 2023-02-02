@@ -12,18 +12,18 @@ These guides are divided into two parts:
 
 ## System requirements
 
-- react-native >= 0.71.0 and use React Native CLI not Expo Go.
+- react-native >= 0.71.0 and React Native CLI.
 - react-native-webview >= 11.26.0
 
 ## Part 1: How to run this example
 
 ### 1. Setting up the development environment
 
-Follow the React Native docs to [setting up the development environment](https://reactnative.dev/docs/environment-setup). 
+Follow the React Native guide to [set up the development environment](https://reactnative.dev/docs/environment-setup).
 
 ### 2. Installation dependencies
 
-Assume you clone project into the `RNWebSDKExample` directory.
+Assume you've cloned project into the `RNWebSDKExample` directory.
 
 #### a. Nodejs dependencies
 
@@ -51,16 +51,16 @@ Navigate to `RNWebSDKExample/ios`, and execute:
 pod install
 ```
 
-### 3. Integrate FoxitPDFSDK for Web
+### 3. Integrate Foxit PDF SDK for Web
 
-#### 3.1. Copy the following directories to `RNWebSDKExample/html/Web.bundle` directory
+#### 3.1. Copy the following directories to the `RNWebSDKExample/html/Web.bundle`.
 
 - FoxitPDFSDKForWeb_x_x_x_Full/lib
 - FoxitPDFSDKForWeb_x_x_x_Full/external
 
-#### 3.2. Change the licenseSN and licenseKey
+#### 3.2. Update the licenseSN and licenseKey
 
-Change the licenseSN and licenseKey values in `RNWebSDKExample/html/Web.bundle/index.html` to the values of file `FoxitPDFSDKForWeb_x_x_x_Full/examples/license-key.js`.
+Update the licenseSN and licenseKey values in `RNWebSDKExample/html/Web.bundle/index.html` to the values in the file `FoxitPDFSDKForWeb_x_x_x_Full/examples/license-key.js`.
 
 ### 4. Running the example
 
@@ -70,44 +70,52 @@ Change the licenseSN and licenseKey values in `RNWebSDKExample/html/Web.bundle/i
 ```bash
 npx react-native start
 ```
-2. Start Android Emulator.
-3. Run app, in the new terminal, navigate to `RNWebSDKExample`, and execute:
+
+2. Start the Android Emulator.
+3. Run the app, and in the new terminal, navigate to `RNWebSDKExample` and execute:
+
 ```bash
 npx react-native run-android
 ```
 
-Wait a while, your app will install and launch in Android emulator automatically.
+Wait for some time and your application will be automatically installed and launched in the Android emulator.
 
 #### iOS
 
-1. Start the Metro service, navigate to `RNWebSDKExample`, and execute:
+1. Start the Metro service, navigate to `RNWebSDKExample` and execute:
+
 ```bash
 npx react-native start
 ```
-2. Run app, in the new terminal, navigate to `RNWebSDKExample`, and execute:
+
+2. Run the app, and in the new terminal, navigate to `RNWebSDKExample` and execute:
+
 ```bash
 npx react-native run-ios
 ```
 
-Wait a while, your app will install and launch in iOS simulator automatically.
+Wait for some time and your application will be automatically installed and launched in the Android emulator.
 
-## Part 2: How to use FoxitPDFSDK for Web in React Native
+## Part 2: How to use Foxit PDF SDK for Web in React Native
 
 ### 1. Setting up the development environment
 
-Follow the React Native docs to [setting up the development environment](https://reactnative.dev/docs/environment-setup).
+Follow the React Native guide to [set up the development environment](https://reactnative.dev/docs/environment-setup).
 
-Assume you create project named `RNWebSDKExample`.
+Assume you've created a project named `RNWebSDKExample`.
 
-### 2. Integrate FoxitPDFSDK for Web
+### 2. Integrate Foxit PDF SDK for Web
 
 #### 2.1 Create a Web resource directory
 
-1. Create a new `html` directory in the `RNWebSDKExample` directory and a new `Web.bundle` directory in the `html` directory.
-2. Copy the following directories to `RNWebSDKExample/html/Web.bundle` directory.
+1. New an `html` directory in the `RNWebSDKExample` and new a `Web.bundle` folder inside the `html` directory.
+2. Copy the following directories to the `RNWebSDKExample/html/Web.bundle`.
+
 - FoxitPDFSDKForWeb_x_x_x_Full/lib
 - FoxitPDFSDKForWeb_x_x_x_Full/external
-3. Copy the index.html file to the `RNWebSDKExample/html/Web.bundle` directory.
+
+3. Copy the `index.html` file to the `RNWebSDKExample/html/Web.bundle` directory.
+
 ```html
 <html>
 <head>
@@ -148,14 +156,16 @@ Assume you create project named `RNWebSDKExample`.
 </body>
 </html>
 ```
-4. Change the licenseSN and licenseKey values in `RNWebSDKExample/html/Web.bundle/index.html` to the values of file `FoxitPDFSDKForWeb_x_x_x_Full/examples/license-key.js`.
+
+4. Update the licenseSN and licenseKey values in `RNWebSDKExample/html/Web.bundle/index.html` to the values in the file `FoxitPDFSDKForWeb_x_x_x_Full/examples/license-key.js`.
 
 #### 2.2 Set up Web resource directory
 
 ##### Android
 
 1. Open the directory `RNWebSDKExample/android` using Android Studio.
-2. Change `RNWebSDKExample/android/app/build.gradle`.
+2. Update `RNWebSDKExample/android/app/build.gradle` as follows.
+
 ```diff
 // ...
 android {
@@ -170,7 +180,7 @@ android {
 
 ##### iOS
 
-1. Open `RNWebSDKExample/ios/RNWebSDK.xcworkspace` with XCode.
+1. Open the `RNWebSDKExample/ios/RNWebSDK.xcworkspace` with XCode.
 2. Expand the left directory tree `RNWebSDKExample/RNWebSDKExample`, drag and drop `RNWebSDKExample/html/Web.bundle` to the directory tree `RNWebSDKExample/RNWebSDKExample`, in the window that pops up, do not check "Copy items if needed" and click "Finish" button.
 
 #### 2.3 Add react-native-webview dependency
@@ -181,11 +191,11 @@ Navigate to `RNWebSDKExample`, and execute:
 npm i react-native-webview
 ```
 
-The official documentation explains this in detail: https://github.com/react-native-webview/react-native-webview/blob/master/docs/Getting-Started.md
+The official documentation explains it in detail: https://github.com/react-native-webview/react-native-webview/blob/master/docs/Getting-Started.md
 
-#### 2.4 Use webview to load and render the FoxitPDFSDK for Web
+#### 2.4 Use webview to load and render the Foxit PDF SDK for Web
 
-There are two ways to load a Web page in webview, one is load a URL like this:
+There are two ways to load a Web page in a webview, one is to load a URL like this:
 
 ```js
 <WebView
@@ -194,9 +204,9 @@ There are two ways to load a Web page in webview, one is load a URL like this:
 />
 ```
 
-the other is load local Web resources, we will use this method below.
+The other is to load local Web resources, which we will use in the following.
 
-1. Create the `src` directory in the `RNWebSDKExample` directory and add the `App.tsx` file to the `src` directory.
+1. Create a `src` directory in the `RNWebSDKExample` directory and add the `App.tsx` file to the `src`directory.
 
 ```jsx
 import React from 'react';
@@ -231,7 +241,7 @@ function App(): JSX.Element {
 export default App;
 ```
 
-2. Change `RNWebSDKExample/index.js`
+2. Update `RNWebSDKExample/index.js` as follows.
 
 ```diff
 import {AppRegistry} from 'react-native';
@@ -247,27 +257,32 @@ AppRegistry.registerComponent(appName, () => App);
 ##### Android
 
 1. Start the Metro service, navigate to `RNWebSDKExample`, and execute:
+
 ```bash
 npx react-native start
 ```
+
 2. Start Android Emulator.
-3. Run app, in the new terminal, navigate to `RNWebSDKExample`, and execute:
+3. Run the app, and in the new terminal, navigate to `RNWebSDKExample`and execute:
+
 ```bash
 npx react-native run-android
 ```
 
-Wait a while, your app will install and launch in Android emulator automatically.
+Wait for some time and your application will be automatically installed and launched in the Android emulator.
 
 ##### iOS
 
-1. Start the Metro service, navigate to `RNWebSDKExample`, and execute:
+1. Start the Metro service, navigate to `RNWebSDKExample` and execute:
+
 ```bash
 npx react-native start
 ```
-2. Run app, in the new terminal, navigate to `RNWebSDKExample`, and execute:
+
+2. Run the app, and in the new terminal, navigate to `RNWebSDKExample` and execute:
+
 ```bash
 npx react-native run-ios
 ```
 
-Wait a while, your app will install and launch in iOS simulator automatically.
-
+Wait for some time and your application will be automatically installed and launched in the Android emulator.
